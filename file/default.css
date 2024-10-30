@@ -1,3 +1,4 @@
+/* Reset body margins and set background */
 body {
   margin: 0;
   padding: 0;
@@ -9,78 +10,132 @@ body {
   color: white;
   overflow: auto;
 }
+
+/* Links */
 a {
   color: white;
   font-size: 14px;
 }
+
+/* Main container width 100% */
 #main {
   width: 100%;
+  padding: 10px; /* Small padding for breathing room */
 }
+
+/* Wrapper centered, responsive size */
 #wrap {
   position: relative;
   margin: 0 auto;
-  width: 1100px;
-  height: 680px;
-  margin-top: 10px;
+  width: 90vw; /* Flexible width */
+  max-width: 1100px; /* Limit max width */
+  height: 60vh;
+  margin-top: 2vh; /* Margin from top */
 }
+
+/* Text box responsive positioning */
 #text {
-  width: 272px;
-  height: 560px;
-  left: 188px;
-  top: 80px;
+  width: 25vw;
+  max-width: 300px;
+  height: 50vh;
+  left: 15vw;
+  top: 8vh;
   position: absolute;
 }
+
+/* Code section styling */
 #code {
   display: none;
   color: rgb(196, 255, 255);
-  font-size: 16px;
-  margin-top: 70px;
-  line-height: 25px;
-  font-size: larger;
+  font-size: 1.2em;
+  margin-top: 5vh;
+  line-height: 1.8em;
   font-weight: bolder;
 }
+
+/* Clock box positioning */
 #clock-box {
   position: absolute;
-  left: 60px;
-  top: 550px;
-  font-size: 28px;
+  left: 5vw;
+  top: 80%;
+  font-size: 2em;
   display: none;
 }
-#clock-box a {
-  font-size: 28px;
-  text-decoration: none;
-}
+
+/* Clock styling */
 #clock {
-  margin-left: 48px;
+  margin-left: 2vw;
 }
 #clock .digit {
-  font-size: 64px;
+  font-size: 4em;
 }
+
+/* Canvas responsive size */
 #canvas {
   margin: 0 auto;
-  width: 1100px;
-  height: 680px;
+  width: 100%;
+  height: 60vh;
+  max-width: 1100px;
 }
+
+/* Error message centered */
 #error {
-  margin: 0 auto;
+  margin: 5vh auto;
   text-align: center;
-  margin-top: 60px;
   display: none;
 }
+
+/* Cursor for interactive elements */
 .hand {
   cursor: pointer;
 }
+
+/* Text styling */
 .say {
-  margin-left: 5px;
+  margin-left: 0.5vw;
 }
 .space {
-  margin-right: 150px;
+  margin-right: 10vw;
 }
 
-#message-box{
+/* Message box positioning */
+#message-box {
   position: absolute;
-  margin-top:450px;
-  font-size: 25px;
+  margin-top: 50vh;
+  font-size: 2em;
   font-family: monospace;
+}
 
+/* Media queries for further adjustments on smaller devices */
+@media (max-width: 768px) {
+  #wrap {
+    width: 95vw;
+    height: auto;
+  }
+  #text, #clock-box, #code {
+    width: auto;
+    left: 5vw;
+    font-size: 1em;
+  }
+  #clock .digit {
+    font-size: 2.5em;
+  }
+  #message-box {
+    font-size: 1.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  #wrap {
+    width: 100vw;
+  }
+  #text, #clock-box, #code {
+    font-size: 0.9em;
+  }
+  #clock .digit {
+    font-size: 2em;
+  }
+  #message-box {
+    font-size: 1.2em;
+  }
 }
