@@ -1,4 +1,3 @@
-/* Reset body margins and set background */
 body {
   margin: 0;
   padding: 0;
@@ -10,132 +9,78 @@ body {
   color: white;
   overflow: auto;
 }
-
-/* Links */
 a {
   color: white;
   font-size: 14px;
 }
-
-/* Main container width 100% */
 #main {
   width: 100%;
-  padding: 10px; /* Small padding for breathing room */
 }
-
-/* Wrapper centered, responsive size */
 #wrap {
   position: relative;
   margin: 0 auto;
-  width: 90vw; /* Flexible width */
-  max-width: 1100px; /* Limit max width */
-  height: 60vh;
-  margin-top: 2vh; /* Margin from top */
+  width: 1100px;
+  height: 680px;
+  margin-top: 10px;
 }
-
-/* Text box responsive positioning */
 #text {
-  width: 25vw;
-  max-width: 300px;
-  height: 50vh;
-  left: 15vw;
-  top: 8vh;
+  width: 272px;
+  height: 560px;
+  left: 188px;
+  top: 80px;
   position: absolute;
 }
-
-/* Code section styling */
 #code {
   display: none;
   color: rgb(196, 255, 255);
-  font-size: 1.2em;
-  margin-top: 5vh;
-  line-height: 1.8em;
+  font-size: 16px;
+  margin-top: 70px;
+  line-height: 25px;
+  font-size: larger;
   font-weight: bolder;
 }
-
-/* Clock box positioning */
 #clock-box {
   position: absolute;
-  left: 5vw;
-  top: 80%;
-  font-size: 2em;
+  left: 60px;
+  top: 550px;
+  font-size: 28px;
   display: none;
 }
-
-/* Clock styling */
+#clock-box a {
+  font-size: 28px;
+  text-decoration: none;
+}
 #clock {
-  margin-left: 2vw;
+  margin-left: 48px;
 }
 #clock .digit {
-  font-size: 4em;
+  font-size: 64px;
 }
-
-/* Canvas responsive size */
 #canvas {
   margin: 0 auto;
-  width: 100%;
-  height: 60vh;
-  max-width: 1100px;
+  width: 1100px;
+  height: 680px;
 }
-
-/* Error message centered */
 #error {
-  margin: 5vh auto;
+  margin: 0 auto;
   text-align: center;
+  margin-top: 60px;
   display: none;
 }
-
-/* Cursor for interactive elements */
 .hand {
   cursor: pointer;
 }
-
-/* Text styling */
 .say {
-  margin-left: 0.5vw;
+  margin-left: 5px;
 }
 .space {
-  margin-right: 10vw;
+  margin-right: 150px;
 }
 
-/* Message box positioning */
-#message-box {
+#message-box{
   position: absolute;
-  margin-top: 50vh;
-  font-size: 2em;
+  margin-top:450px;
+  font-size: 25px;
   font-family: monospace;
-}
 
-/* Media queries for further adjustments on smaller devices */
-@media (max-width: 768px) {
-  #wrap {
-    width: 95vw;
-    height: auto;
-  }
-  #text, #clock-box, #code {
-    width: auto;
-    left: 5vw;
-    font-size: 1em;
-  }
-  #clock .digit {
-    font-size: 2.5em;
-  }
-  #message-box {
-    font-size: 1.5em;
-  }
-}
-
-@media (max-width: 480px) {
-  #wrap {
-    width: 100vw;
-  }
-  #text, #clock-box, #code {
-    font-size: 0.9em;
-  }
-  #clock .digit {
-    font-size: 2em;
-  }
-  #message-box {
-    font-size: 1.2em;
-  }
 }
