@@ -156,30 +156,18 @@
     var point = heart.point, color = heart.color, 
         scale = heart.scale;
 
-    // Save the canvas context state
     ctx.save();
-
-    // Set styles and move to heart location
-    ctx.strokeStyle = color;
     ctx.fillStyle = color;
     ctx.translate(point.x, point.y);
     ctx.scale(scale, scale);
 
-    // Draw the line on the left side of the heart
-    ctx.beginPath();
-    ctx.moveTo(0, 0);
-    ctx.lineTo(-15, 0);     // Shorter line length near heart
-    ctx.lineTo(-90, 0);     // Adjusted line length for better alignment
-    ctx.stroke();
+    // Set font properties for text
+    ctx.font = "16px Verdana";  // Increased font size for better visibility
 
-    // Set text styling
-    ctx.font = "12px Verdana";
+    // Position the text relative to the enlarged heart
+    ctx.fillText("Click Me:)", -50, -20); 
+    ctx.fillText("Birthday Queen!", -50, 0);
 
-    // Position text on the left side of the heart
-    ctx.fillText("Click Me:)", -110, -5); 
-    ctx.fillText("Birthday Queen!", -110, 10); 
-
-    // Restore the canvas context state
     ctx.restore();
 },
         clear: function() {
