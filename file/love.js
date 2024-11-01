@@ -155,26 +155,31 @@
     var ctx = this.tree.ctx, heart = this.heart;
     var point = heart.point, color = heart.color, 
         scale = heart.scale;
+
+    // Save the canvas context state
     ctx.save();
+
+    // Set styles and move to heart location
     ctx.strokeStyle = color;
     ctx.fillStyle = color;
     ctx.translate(point.x, point.y);
     ctx.scale(scale, scale);
-    
-    // Draw the line to the left
+
+    // Draw the line on the left side of the heart
     ctx.beginPath();
     ctx.moveTo(0, 0);
-    ctx.lineTo(-15, 15); // Adjust line start point
-    ctx.lineTo(-130, 15); // Adjust line end point for left alignment
+    ctx.lineTo(-15, 0);     // Shorter line length near heart
+    ctx.lineTo(-90, 0);     // Adjusted line length for better alignment
     ctx.stroke();
-    
-    // Set font properties and scale for text
-    ctx.scale(0.75, 0.75);  // Scale down to fit the area
-    ctx.font = "12px Verdana"; // Ensure font is applied correctly
 
-    // Adjust text position to the left of the heart
-    ctx.fillText("Click Me:)", -100, -5); 
-    ctx.fillText("Birthday Queen!", -102, 10); 
+    // Set text styling
+    ctx.font = "12px Verdana";
+
+    // Position text on the left side of the heart
+    ctx.fillText("Click Me:)", -110, -5); 
+    ctx.fillText("Birthday Queen!", -110, 10); 
+
+    // Restore the canvas context state
     ctx.restore();
 },
         clear: function() {
