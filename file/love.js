@@ -165,7 +165,7 @@
     ctx.font = "12px Verdana";  // Increased font size for better visibility
 
     // Position the text relative to the heart
-    ctx.fillText("Click Me:)", -110, -60); 
+    ctx.fillText("Click Heart:)", -110, -60); 
     ctx.fillText("Birthday Queen!", -110, -40);
 
     ctx.restore();
