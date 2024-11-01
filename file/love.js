@@ -1,4 +1,4 @@
-﻿(function(window){
+(function(window){
 
     function random(min, max) {
         return min + Math.floor(Math.random() * (max - min + 1));
@@ -152,26 +152,26 @@
             ctx.restore();
         },
         drawText: function() {
-            var ctx = this.tree.ctx, heart = this.heart;
-            var point = heart.point, color = heart.color, 
-                scale = heart.scale;
-            ctx.save();
-            ctx.strokeStyle = color;
-            ctx.fillStyle = color;
-            ctx.translate(point.x, point.y);
-            ctx.scale(scale, scale);
-            ctx.moveTo(0, 0);
-    	    ctx.lineTo(15, 15);
-    	    ctx.lineTo(130, 15);
-            ctx.stroke();
+    var ctx = this.tree.ctx, heart = this.heart;
+    var point = heart.point, color = heart.color, 
+        scale = heart.scale;
+    ctx.save();
+    ctx.strokeStyle = color;
+    ctx.fillStyle = color;
+    ctx.translate(point.x, point.y);
+    ctx.scale(scale, scale);
+    ctx.moveTo(0, 0);
+    ctx.lineTo(-15, 15);  // Adjusted line positions for left alignment
+    ctx.lineTo(-130, 15);
+    ctx.stroke();
 
-            ctx.moveTo(0, 0);
-            ctx.scale(0.75, 0.75);
-            ctx.font = "12px,Verdana"; // 字号肿么没有用? (ˉ(∞)ˉ)
-            ctx.fillText("Click Me:) ", 30, -5);
-            ctx.fillText("Birthday Queen !", 28, 10);
-            ctx.restore();
-        },
+    ctx.moveTo(0, 0);
+    ctx.scale(0.75, 0.75);
+    ctx.font = "12px Verdana"; 
+    ctx.fillText("Click Me:) ", -100, -5); // Negative x coordinate to shift left
+    ctx.fillText("Birthday Queen!", -102, 10); // Align to the left side of the heart
+    ctx.restore();
+},
         clear: function() {
             var ctx = this.tree.ctx, cirle = this.cirle;
             var point = cirle.point, scale = cirle.scale, radius = 26;
