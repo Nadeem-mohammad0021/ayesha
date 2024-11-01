@@ -67,14 +67,14 @@
     }
     Heart.prototype = {
         get: function(i, scale) {
-            return this.points[i].mul(scale || 1.5);
+            return this.points[i].mul(scale || 2);
         }
     }
 
     Seed = function(tree, point, scale, color) {
         this.tree = tree;
 
-        var scale = scale || 1.5
+        var scale = scale || 2
         var color = '#FFC0CB';
 
         this.heart = {
