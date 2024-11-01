@@ -166,7 +166,7 @@
 
     // Position the text relative to the heart
     ctx.fillText("Click Me:)", -110, -60); 
-    ctx.fillText("Birthday Queen!", -110, -50);
+    ctx.fillText("Birthday Queen!", -110, -40);
 
     ctx.restore();
 },
