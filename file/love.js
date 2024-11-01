@@ -108,7 +108,7 @@
             this.addPosition(x, y);
         },
         canScale: function() {
-            return this.heart.scale > 1;
+            return this.heart.scale > 1.5;
         },
         setHeartScale: function(scale) {
             this.heart.scale *= scale;
