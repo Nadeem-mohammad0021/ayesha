@@ -160,16 +160,21 @@
     ctx.fillStyle = color;
     ctx.translate(point.x, point.y);
     ctx.scale(scale, scale);
+    
+    // Draw the line to the left
+    ctx.beginPath();
     ctx.moveTo(0, 0);
-    ctx.lineTo(-15, 15);  // Adjusted line positions for left alignment
-    ctx.lineTo(-130, 15);
+    ctx.lineTo(-15, 15); // Adjust line start point
+    ctx.lineTo(-130, 15); // Adjust line end point for left alignment
     ctx.stroke();
+    
+    // Set font properties and scale for text
+    ctx.scale(0.75, 0.75);  // Scale down to fit the area
+    ctx.font = "12px Verdana"; // Ensure font is applied correctly
 
-    ctx.moveTo(0, 0);
-    ctx.scale(0.75, 0.75);
-    ctx.font = "12px Verdana"; 
-    ctx.fillText("Click Me:) ", -100, -5); // Negative x coordinate to shift left
-    ctx.fillText("Birthday Queen!", -102, 10); // Align to the left side of the heart
+    // Adjust text position to the left of the heart
+    ctx.fillText("Click Me:)", -100, -5); 
+    ctx.fillText("Birthday Queen!", -102, 10); 
     ctx.restore();
 },
         clear: function() {
